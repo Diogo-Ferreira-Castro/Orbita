@@ -1,0 +1,42 @@
+ÓRBITA INFINITY V25 — INTEGRATION ENGINE
+
+VERSÃO GITHUB PAGES PRONTA
+
+OBJETIVO DA V25
+Transformar o Arquivo Vivo em um ambiente realmente integrado: dados criados em um bloco podem alimentar outros blocos automaticamente.
+
+INTEGRATION ENGINE
+- Botão 🔗 Integração na barra superior e em cada bloco.
+- Conexões origem → destino com atualização automática.
+- Central de Dados Vivos criada pelo Auto-conectar.
+- Variáveis vivas reutilizáveis no arquivo.
+- Campos vivos em textos.
+- Fórmula de planilha =VIVO("nome.da.variavel").
+- Automações condicionais: notificar ou alterar outro campo quando uma condição for atingida.
+- Proteção básica contra ciclos de conexão.
+- Project → Calendário sincronizado.
+- CAD 2D, 3D, Project, calendário, Kanban, calculadora, checklist, mídia e banco podem alimentar a Central de Dados.
+- Central de Dados → BI ao vivo.
+- Planilha, BI, Project, Slides, Banco, 3D, Código e textos expõem entradas/saídas para vínculos personalizados.
+- IA recebe também os Dados Vivos no contexto do Arquivo Vivo.
+
+AUTO-CONEXÃO
+Ao abrir um arquivo V25 com múltiplos blocos de dados, o Órbita cria a malha inicial uma única vez sem apagar conteúdo existente. Também é possível abrir 🔗 Integração > ✨ Auto-conectar Arquivo Vivo.
+
+EXEMPLOS
+1. CAD comprimento → Central de Dados → BI.
+2. Project custo → planilha → BI.
+3. Project tarefas → Calendário.
+4. Planilha B2 → progresso de uma tarefa do Project.
+5. Planilha → largura/altura/profundidade de um objeto 3D.
+6. Variável project.custo_total dentro de uma planilha: =VIVO("project.custo_total").
+7. Inserir project.progresso como campo vivo em um relatório de texto.
+
+ATALHO
+Ctrl + Shift + L abre o Integration Engine.
+
+PUBLICAÇÃO
+Extraia este ZIP e envie os arquivos da raiz para a raiz do repositório GitHub Pages. O service worker usa cache V25.
+
+OBSERVAÇÃO
+As ferramentas Office/BI/Project/CAD/3D são implementações próprias do Órbita e não substituem integralmente os motores dos produtos proprietários correspondentes.

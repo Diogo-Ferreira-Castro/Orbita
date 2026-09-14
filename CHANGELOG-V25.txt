@@ -1,0 +1,16 @@
+ÓRBITA INFINITY V25
+
+- Novo Integration Engine / Data Bus.
+- Conexões ao vivo entre blocos.
+- Central de Dados Vivos e auto-conexão.
+- Variáveis compartilhadas e campos vivos.
+- Fórmula VIVO() na planilha.
+- Project → Calendário dinâmico.
+- CAD/3D/Project/Kanban/Calculadora/Checklist/Mídia/Banco → Central de Dados.
+- Central de Dados → BI.
+- Conexões personalizadas para Planilha, BI, Project, Slides, Banco, 3D e Código.
+- Automações por condição.
+- IA recebe o barramento de dados no contexto.
+- Atalho Ctrl+Shift+L.
+- Novo modelo Arquivo Vivo Integrado MAX.
+- PWA/cache atualizado para V25.

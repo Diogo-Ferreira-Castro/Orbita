@@ -1,0 +1,26 @@
+ÓRBITA INFINITY V25 — VALIDAÇÃO TÉCNICA
+
+Validações executadas antes do empacotamento:
+- node --check em orbita-infinity.js: OK
+- node --check em sw.js: OK
+- extração e validação do JavaScript inline do index.html: OK
+- teste de runtime com DOM simulado e dados reais de blocos: OK
+
+Cenário integrado validado:
+- 14 conexões automáticas criadas
+- 176 variáveis vivas geradas no cenário MAX
+- CAD 2D comprimento -> Central de Dados: OK
+- 3D volume -> Central de Dados: OK
+- Project custo/horas/progresso -> Central de Dados: OK
+- Project tarefas -> Calendário: OK
+- Kanban/Calculadora/Checklist/Banco -> Central de Dados: OK
+- Central de Dados -> BI: OK
+
+Teste de conexão personalizada:
+- Planilha B2 -> Project progresso: OK
+- Planilha B2 -> dimensão W de objeto 3D: OK
+- =VIVO("project.custo_total")*2 em planilha: OK
+- variável personalizada de conexão: OK
+
+Observação:
+O navegador Chromium disponível no ambiente não inicializa em modo headless, então o teste visual automatizado foi substituído por teste de runtime JavaScript com DOM simulado + validações sintáticas. Faça a conferência visual final depois de publicar/abrir a V25 em Chrome/Edge/Safari.

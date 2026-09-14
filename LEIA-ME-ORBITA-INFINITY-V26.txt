@@ -1,0 +1,23 @@
+ÓRBITA INFINITY V26 — CONTROLE + COLABORAÇÃO + SUGESTÕES
+
+NOVO NESTA VERSÃO
+- ↶/↷ Desfazer e refazer global do Arquivo Vivo (até 60 estados por sessão).
+- 📜 Histórico manual de versões com restauração e backup antes de restaurar.
+- 💾 Salvar como e ⧉ duplicar arquivo sem alterar o original.
+- 👥 Sala colaborativa com código, enviar/receber alterações e comentários.
+- 💡 Sugestões contextuais conforme o bloco selecionado (CAD, Project, texto, planilha, BI, código etc.).
+- Atalhos: Ctrl+Z, Ctrl+Y e Ctrl+Shift+S quando o foco não está em um campo de texto.
+
+COLABORAÇÃO
+1. O app continua funcionando sem a colaboração.
+2. Para salas entre contas diferentes, execute uma vez no Supabase SQL Editor:
+   setup/supabase-v26-collaboration.sql
+3. Entre na conta no Órbita.
+4. Arquivo Vivo > 👥 Colaborar > Criar sala.
+5. Compartilhe o código com o outro usuário. Ele usa “Entrar em uma sala”.
+6. A sala usa sincronização com política de último envio; antes de receber uma versão remota o Órbita cria backup no histórico.
+
+IMPORTANTE
+- O histórico local e desfazer/refazer funcionam sem Supabase.
+- A colaboração online exige Supabase configurado e a migração V26.
+- Faça backup antes de trocar os arquivos publicados.

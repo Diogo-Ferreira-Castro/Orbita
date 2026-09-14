@@ -1,0 +1,7 @@
+V26
++ Undo/redo global
++ Histórico e snapshots
++ Salvar como / duplicar
++ Colaboração por sala com código + comentários + sincronização manual e polling
++ Sugestões contextuais acionáveis
++ Migração Supabase V26 para colaboração
