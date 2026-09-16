@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Órbita">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="48" x2="452" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1777E6"/><stop offset="1" stop-color="#6036D9"/>
+    </linearGradient>
+    <linearGradient id="planet" x1="190" y1="174" x2="330" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFE7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="118" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="78" fill="url(#planet)"/>
+  <path d="M94 300c45 44 142 59 236 29 95-30 154-96 133-145-12-28-48-42-98-42" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round" opacity=".96"/>
+  <path d="M419 211c-23-36-81-51-151-37-79 15-147 65-165 113" fill="none" stroke="#AEE0FF" stroke-width="10" stroke-linecap="round" opacity=".78"/>
+  <circle cx="105" cy="297" r="24" fill="#FFCB55" stroke="#fff" stroke-width="10"/>
+  <path d="M382 92l7 20 20 7-20 7-7 20-7-20-20-7 20-7z" fill="#fff"/>
+</svg>

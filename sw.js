@@ -1,13 +1,12 @@
-/* Órbita Infinity V26 — service worker
+/* Órbita V20 — service worker
    Network-first no app e na configuração para evitar celular preso em versão antiga. */
-var CACHE = 'orbita-infinity-v26-20260910';
+var CACHE = 'orbita-v20-ai-autocadastro-memoria-20260910';
 var ASSETS = [
   './',
   './index.html',
   './config.js',
   './manifest.webmanifest',
-  './orbita-infinity.css',
-  './orbita-infinity.js',
+  './icons/orbita-logo.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-180.png'
@@ -25,7 +24,7 @@ self.addEventListener('install', function(e){
 self.addEventListener('activate', function(e){
   e.waitUntil(
     caches.keys().then(function(keys){
-      return Promise.all(keys.map(function(k){ return k===CACHE ? null : caches.delete(k); }));
+      return Promise.all(keys.map(function(k){ return k===CACHE || (!k.startsWith('trilha-')&&!k.startsWith('orbita-')) ? null : caches.delete(k); }));
     }).then(function(){ return self.clients.claim(); })
   );
 });
@@ -42,13 +41,13 @@ self.addEventListener('fetch', function(e){
 
   var networkFirst = req.mode==='navigate' ||
     url.pathname.endsWith('/index.html') || url.pathname.endsWith('/') ||
-    url.pathname.endsWith('/config.js');
+    url.pathname.endsWith('/config.js') || url.pathname.endsWith('/app.js');
 
   if(networkFirst){
     e.respondWith(fetch(req, {cache:'no-store'}).then(function(resp){
       if(resp&&resp.ok){
         caches.open(CACHE).then(function(c){
-          var key=url.pathname.endsWith('/config.js') ? './config.js' : './index.html';
+          var key=url.pathname.endsWith('/config.js') ? './config.js' : url.pathname.endsWith('/app.js') ? './app.js' : './index.html';
           c.put(key,resp.clone());
           if(req.mode==='navigate') c.put(req,resp.clone());
         });
@@ -57,7 +56,9 @@ self.addEventListener('fetch', function(e){
     }).catch(function(){
       return caches.match(req).then(function(x){
         if(x) return x;
-        return url.pathname.endsWith('/config.js') ? caches.match('./config.js') : caches.match('./index.html');
+        if (url.pathname.endsWith('/config.js')) return caches.match('./config.js');
+        if (url.pathname.endsWith('/app.js')) return caches.match('./app.js');
+        return caches.match('./index.html');
       });
     }));
     return;
